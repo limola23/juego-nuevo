@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooperative Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Cooperative Game</h1>
+
+        <!-- Mesa -->
+        <div id="mesa" class="mesa"></div>
+
+        <!-- Manos de los jugadores -->
+        <div class="hand-container">
+            <div class="hand">
+                <h2>Mano de la Computadora</h2>
+                <div id="mano-computadora" class="hand-area"></div>
+            </div>
+            <div class="hand">
+                <h2>Tu Mano</h2>
+                <div id="mano-jugador" class="hand-area"></div>
+            </div>
+        </div>
+
+        <!-- Controles -->
+        <div class="controls">
+            <button onclick="darPista()">Dar Pista</button>
+            <button onclick="descartarCarta()">Descartar Carta</button>
+            <button onclick="finalizarTurno()">Finalizar Turno</button>
+            <button onclick="iniciarJuego()">Reiniciar Juego</button>
+        </div>
+
+        <!-- Estado del Juego -->
+        <div id="estado" class="estado"></div>
+
+        <!-- Reglas -->
+        <div class="rules">
+            <h2>Reglas del Juego</h2>
+            <ul>
+                <li>El objetivo es construir una secuencia del 1 al 10 en la mesa.</li>
+                <li>Puedes jugar una carta, descartar una carta o dar una pista a la computadora.</li>
+                <li>Solo se pueden descartar un máximo de 3 cartas por jugador.</li>
+                <li>Si se pasan 5 turnos sin jugar carta, se pierde el juego.</li>
+                <li>Utiliza las pistas estratégicamente para guiar a la computadora.</li>
+                <li>El juego termina al completar la secuencia o alcanzar los límites de descartes o turnos.</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
